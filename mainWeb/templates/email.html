@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+
+
+    <form class="" action="/email_send/" method="POST">
+
+      {% csrf_token %}
+
+<style type="text/css">
+*{
+padding:auto;
+margin:auto;
+text-align:center;
+}
+</style>
+
+<nav class="navbar navbar-dark bg-dark">
+ <a class="navbar-brand" href="/logout/">Logout <span class="sr-only">(current)</span></a>
+</nav>
+
+<br>
+
+
+      <div class="form-row">
+
+         <div class="form-group col-6">
+          <label for="exampleFormControlSelect1">Semester</label>
+          <select type="text" class="form-control form-control-sm" name="semester1">
+
+            <option>Spring</option>
+            <option>Summer</option>
+            <option>Fall</option>
+          </select>
+        </div>
+        </div>
+
+        <div class="form-row">
+
+           <div class="form-group col-6">
+            <label for="exampleFormControlSelect1">Year</label>
+            <select class="form-control form-control-sm" name="year1">
+              <option>2019</option>
+              <option>2020</option>
+              <option>2021</option>
+              <option>2022</option>
+              <option>2023</option>
+              <option>2024</option>
+              <option>2025</option>
+              <option>2026</option>
+              <option>2027</option>
+              <option>2028</option>
+              <option>2029</option>
+              <option>2030</option>
+              <option>2031</option>
+              <option>2032</option>
+            </select>
+          </div>
+        </div>
+
+        <!--<div class="form-row">-->
+          <div class="form-group col-30">
+             <label for="exampleInputEmail1">Email Subject</label>
+             <input name="subject" type="text" class="form-control" id="exampleInputEmail1" name="subject" aria-describedby="emailHelp" placeholder="">
+          </div>
+
+          <div class="form-group">
+             <label for="exampleFormControlTextarea1">Write Your Message Here</label>
+             <textarea name="message" class="form-control" id="exampleFormControlTextarea1"  rows="3" cols="50"></textarea>
+           </div>
+
+
+           <div class="" >
+             <button type="submit" class="btn btn-success">Send</button>
+           </div>
+
+
+    </form>
+
+
+
+  </body>

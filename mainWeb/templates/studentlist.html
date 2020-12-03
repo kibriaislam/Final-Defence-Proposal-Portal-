@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>
+
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+
+
+{% csrf_token %}
+
+<style type="text/css">
+*{
+padding:auto;
+margin:auto;
+text-align:center;
+}
+</style>
+
+<nav class="navbar navbar-dark bg-dark">
+ <a class="navbar-brand" href="/xlsheet">Excelsheet Report <span class="sr-only">(current)</span></a>
+ <a class="navbar-brand" href="/emailPage">Email <span class="sr-only">(current)</span></a>
+ <a class="navbar-brand" href="/logout/">Logout <span class="sr-only">(current)</span></a>
+</nav>
+
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Student Response List </h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Semester</th>
+  </tr>
+{% for data in data %}
+  <tr>
+    <td>
+      {{data.sName}}
+    </td>
+    <td>
+      {{data.title}}
+    </td>
+    <td>
+      {{data.semester}}
+    </td>
+   
+  </tr>
+  {% endfor %}
+
+</table>
+
+
+
+  </body>
